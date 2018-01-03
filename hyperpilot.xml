@@ -1143,4 +1143,8 @@
     <m e="way" k="power" v="minor_line">
         <line stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="1.0"/>
     </m>
+    <!-- Cable cars -->
+    <m e="way" k="aerialway">
+        <line stroke="#3948e2" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>
+    </m>
 </rendertheme>
