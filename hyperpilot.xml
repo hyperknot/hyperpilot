@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+    <!-- START hyperpilot  -->
+    <!-- roads -->
     <style-line id="highway:z11" stroke="#ff7e00" width="5.0"/>
     <style-line id="trunk" stroke="#ff7e00" width="5.0"/>
     <style-line cap="butt" id="trunk_link" stroke="#ff7e00" width="3.0"/>
@@ -13,6 +15,9 @@
     <!-- <style-line id="highway:z11:bridge" use="highway:z11" cap="butt" />-->
     <style-line id="construction" use="secondary:z11"/>
     <style-line id="highway-service" use="residential" width="-0.6"/>
+    <!-- military -->
+    <style-area fade="11" fill="#f1bfbf" id="military"/>
+    <!-- END hyperpilot  -->
     <!-- base style for fixed width lines -->
     <style-line cap="butt" fix="true" id="fix" width="1.0"/>
     <style-text fill="#101010" id="road" k="name" priority="2" size="16" stroke="#eeeeee" stroke-width="2.0"/>
@@ -77,8 +82,6 @@
     <m e="way" k="natural" v="nosea">
         <area fill="#f8f8f8" mesh="true"/>
     </m>
-    <style-area fill="#ff0000" id="red"/>
-    <style-area fade="11" fill="#f1bfbf" id="military"/>
     <!-- all closed ways that are not 'highway' or 'building' -->
     <m closed="yes" e="way" k="highway|building" v="~">
         <!-- landuse base -->
@@ -103,15 +106,16 @@
             <m v="quarry">
                 <area use="quarry"/>
             </m>
-            <m v="farmyard|retail|commercial|industrial;retail">
-                <area use="residential"/>
-            </m>
+            <!-- <m v="farmyard|retail|commercial|industrial;retail"><area use="residential" /></m>-->
             <m v="industrial|railway">
                 <area use="railway|industrial"/>
             </m>
             <m v="military">
                 <area use="military"/>
             </m>
+            <!--<m k="landuse" v="construction|greenfield"><area fill="#a47c41"
+              stroke="#e4e4e4" width="0.2" /></m>-->
+            <!-- <m k="landuse" v="garages"><area fill="#d6d6e4" /></m>-->
         </m>
         <m k="landuse|natural|leisure|amenity|tourism">
             <!-- kind of more like landuse imho -->
@@ -130,7 +134,28 @@
                     <area fill="#c0d69a"/>
                 </m>
             </m>
+            <!-- amenity -->
+            <m k="amenity" zoom-min="14">
+                <m v="kindergarten|school|college|university">
+                    <!-- <area fill="#cdabde" />-->
+                    <area fade="14" fill="#e6e4c5"/>
+                    <line cap="butt" fade="14" fix="true" stroke="#9aabae" width="1.0"/>
+                </m>
+                <m v="hospital">
+                    <area fill="#f2d9b1"/>
+                </m>
+                <!-- <m v="parking" zoom-min="15"><area fill="#f4f4f4" stroke="#d4d4d4" stroke-width="0.2" /></m><m v="fountain" closed="yes"><area fill="#b4cbdc" stroke="#000080" stroke-width="0.15" /></m>-->
+            </m>
             <!-- landuse -->
+            <m k="landuse" zoom-min="11">
+                <!-- how about 'leisure' for this one? -->
+                <m v="cemetery">
+                    <area use="park"/>
+                    <m zoom-min="14">
+                        <line use="park"/>
+                    </m>
+                </m>
+            </m>
             <m k="landuse" v="village_green|recreation_ground">
                 <area use="greens"/>
             </m>
@@ -165,6 +190,20 @@
             <m k="leisure" v="garden">
                 <area use="greens"/>
             </m>
+            <!-- amenity -->
+            <m k="amenity">
+                <!--<m v="kindergarten|school|college|university" zoom-min="15"><area fill="#cdbbca" fade="15"/><line stroke="#9aabae" width="1.0" fix="true" cap="butt" fade="15"/></m><m v="hospital" zoom-min="14"><area fill="#e6e4c5" /></m>-->
+                <m v="parking" zoom-min="15">
+                    <area fill="#f4f4f4" stroke="#d4d4d4" stroke-width="0.2"/>
+                    <m zoom-min="17">
+                        <symbol src="file:symbols/transport/parking.svg"/>
+                    </m>
+                </m>
+                <m closed="yes" v="fountain">
+                    <area fill="#b4cbdc" stroke="#000080" stroke-width="0.15"/>
+                </m>
+            </m>
+            <!-- <m k="natural" v="coastline"><line stroke="#a4bbcc" width="1.2" fix="true" /></m>-->
             <!-- natural -->
             <m k="natural" zoom-min="10">
                 <m v="glacier">
@@ -201,6 +240,9 @@
                 <m v="swimming_pool">
                     <area fill="#d4ebfc" stroke="#6060ff" stroke-width="0.2"/>
                 </m>
+                <!-- <m v="track"><m k="area" v="yes|true"><area fill="#c9d8a2" stroke="#b7c690" width="0.025" /></m><m
+                  e="way" k="area" v="~|no|false"><line stroke="#b7c690" width="0.75"
+                  /></m></m>-->
             </m>
             <!-- area outlines need to be above to avoid uggly pixelation where
               not aliased polygon overlaps the lines... -->
@@ -741,6 +783,24 @@
                 <line use="aeroway:runway" width="-0.8"/>
             </m>
         </m>
+        <!-- man_made features -->
+        <m k="man_made" v="pier">
+            <m closed="no">
+                <line cap="butt" stroke="#d0d0d0" width="0.4"/>
+                <line cap="butt" stroke="#e4e4e4" width="0.3"/>
+            </m>
+            <m closed="yes">
+                <area fill="#e4e4e4" stroke="#d0d0d0" stroke-width="1.05"/>
+            </m>
+        </m>
+        <!-- barriers -->
+        <m k="barrier">
+            <!-- <m v="fence|wall|city_wall" zoom-min="15"><line
+              stroke="#909090" width="0.1" cap="butt" /></m>-->
+            <m v="retaining_wall" zoom-min="15">
+                <line cap="butt" fix="true" stroke="#888888" width="1.1"/>
+            </m>
+        </m>
         <!-- railway (no tunnel) -->
         <m k="railway" zoom-min="10">
             <m k="tunnel" v="~|false|no">
@@ -812,6 +872,22 @@
     </m>
     <!-- end e="way" -->
     <m e="node" select="first">
+        <m k="barrier">
+            <m zoom-min="16">
+                <m v="bollard">
+                    <symbol src="file:symbols/barrier/bollard.svg"/>
+                </m>
+                <m v="block">
+                    <symbol src="file:symbols/barrier/blocks.svg"/>
+                </m>
+                <m v="gate">
+                    <symbol src="file:symbols/barrier/gate.svg"/>
+                </m>
+                <m v="lift_gate">
+                    <symbol src="file:symbols/barrier/lift_gate.svg"/>
+                </m>
+            </m>
+        </m>
         <m k="highway">
             <m v="bus_stop">
                 <symbol src="file:symbols/dot_blue.svg"/>
@@ -822,6 +898,13 @@
             </m>
             <m v="turning_circle">
                 <circle fill="#ffffff" radius="1.4" scale-radius="true"/>
+            </m>
+        </m>
+        <!-- historic -->
+        <m k="historic">
+            <symbol src="file:symbols/tourist/monument.svg"/>
+            <m zoom-min="17">
+                <text use="poi"/>
             </m>
         </m>
         <!-- place -->
@@ -865,6 +948,186 @@
             </m>
             <m v="level_crossing">
                 <symbol src="file:symbols/railway-crossing.svg"/>
+            </m>
+        </m>
+        <!-- aeroway -->
+        <m k="aeroway">
+            <m v="helipad" zoom-min="16">
+                <symbol src="file:symbols/transport/helicopter.svg"/>
+            </m>
+            <m v="aerodrome|airport" zoom-min="9">
+                <symbol src="file:symbols/transport/airport2.svg"/>
+            </m>
+        </m>
+        <m k="amenity">
+            <m select="first" zoom-min="15">
+                <m v="hospital">
+                    <symbol src="file:symbols/health/hospital.svg"/>
+                </m>
+                <m v="school">
+                    <symbol src="file:symbols/education/school.svg"/>
+                </m>
+                <m v="university|college">
+                    <symbol src="file:symbols/education/university.svg"/>
+                </m>
+                <m v="library">
+                    <symbol src="file:symbols/amenity/library.svg"/>
+                </m>
+                <m v="cinema">
+                    <symbol src="file:symbols/tourist/cinema2.svg"/>
+                </m>
+                <m select="when-matched">
+                    <text use="poi"/>
+                </m>
+            </m>
+            <m select="first" zoom-min="16">
+                <m v="atm" zoom-min="17">
+                    <symbol src="file:symbols/money/atm2.svg"/>
+                </m>
+                <m v="cafe">
+                    <symbol src="file:symbols/food/cafe.svg"/>
+                </m>
+                <m v="pub">
+                    <symbol src="file:symbols/food/pub.svg"/>
+                </m>
+                <m v="bar">
+                    <symbol src="file:symbols/food/bar.svg"/>
+                </m>
+                <m v="fast_food">
+                    <symbol src="file:symbols/food/fastfood.svg"/>
+                </m>
+                <m v="restaurant">
+                    <symbol src="file:symbols/food/restaurant.svg"/>
+                </m>
+                <m v="bus_station">
+                    <symbol src="file:symbols/transport/bus_station.svg"/>
+                </m>
+                <m select="when-matched">
+                    <text use="poi"/>
+                </m>
+            </m>
+            <m select="first" zoom-min="17">
+                <m v="bank">
+                    <symbol src="file:symbols/money/bank2.svg"/>
+                </m>
+                <!--<m v="bench"><symbol src="file:symbols/bench.svg" /></m>-->
+                <m v="bicycle_rental">
+                    <symbol src="file:symbols/transport/rental_bicycle.svg"/>
+                </m>
+                <m v="drinking_water">
+                    <symbol src="file:symbols/food/drinkingtap.svg"/>
+                </m>
+                <m v="fire_station">
+                    <symbol src="file:symbols/amenity/firestation3.svg"/>
+                </m>
+                <m v="fountain">
+                    <symbol src="file:symbols/amenity/fountain2.svg"/>
+                </m>
+                <m v="fuel">
+                    <symbol src="file:symbols/transport/fuel.svg"/>
+                </m>
+                <m v="kindergarten">
+                    <symbol src="file:symbols/education/nursery3.svg"/>
+                </m>
+                <m v="parking">
+                    <symbol src="file:symbols/transport/parking.svg"/>
+                </m>
+                <m v="pharmacy">
+                    <symbol src="file:symbols/health/pharmacy.svg"/>
+                </m>
+                <m v="place_of_worship">
+                    <m k="denomination|religion" v="buddhist">
+                        <symbol src="file:symbols/place_of_worship/buddhist.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="christian">
+                        <symbol src="file:symbols/place_of_worship/christian.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="hindu">
+                        <symbol src="file:symbols/place_of_worship/hindu.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="jewish">
+                        <symbol src="file:symbols/place_of_worship/jewish.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="muslim|moslem">
+                        <symbol src="file:symbols/place_of_worship/islamic.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="shinto">
+                        <symbol src="file:symbols/place_of_worship/shinto.svg"/>
+                    </m>
+                    <m k="denomination|religion" v="~|*">
+                        <symbol src="file:symbols/place_of_worship/unknown.svg"/>
+                    </m>
+                </m>
+                <m v="post_box">
+                    <symbol src="file:symbols/amenity/post_box.svg"/>
+                </m>
+                <m v="post_office">
+                    <symbol src="file:symbols/amenity/post_office.svg"/>
+                </m>
+                <m v="recycling">
+                    <symbol src="file:symbols/amenity/recycling.svg"/>
+                </m>
+                <m v="shelter">
+                    <symbol src="file:symbols/accommodation/shelter2.svg"/>
+                </m>
+                <m v="telephone">
+                    <symbol src="file:symbols/amenity/telephone.svg"/>
+                </m>
+                <m v="theatre">
+                    <symbol src="file:symbols/tourist/theatre.svg"/>
+                </m>
+                <m select="when-matched">
+                    <text use="poi"/>
+                </m>
+            </m>
+            <m zoom-min="17">
+                <m v="toilets">
+                    <symbol src="file:symbols/amenity/toilets.svg"/>
+                </m>
+            </m>
+        </m>
+        <m k="shop">
+            <m select="first" zoom-min="15">
+                <m v="bakery">
+                    <symbol src="file:symbols/shopping/bakery.svg"/>
+                </m>
+                <!--<m v="florist"><symbol src="file:symbols/shopping/florist.svg" /></m>-->
+                <!--<m v="hairdresser" zoom-min="16"><symbol src="file:symbols/shopping/hairdresser.svg" /></m>-->
+                <m v="supermarket|organic">
+                    <symbol src="file:symbols/shopping/supermarket.svg"/>
+                </m>
+                <m zoom-min="17">
+                    <symbol src="file:symbols/dot_magenta.svg"/>
+                </m>
+                <m select="when-matched" zoom-min="17">
+                    <text use="poi"/>
+                </m>
+            </m>
+        </m>
+        <m k="tourism">
+            <m select="first" zoom-min="15">
+                <m v="alpine_hut">
+                    <symbol src="file:symbols/accommodation/alpinehut.svg"/>
+                </m>
+                <m v="camp_site">
+                    <symbol src="file:symbols/accommodation/camping.svg"/>
+                </m>
+                <m v="hostel">
+                    <symbol src="file:symbols/accommodation/hostel.svg"/>
+                </m>
+                <m v="hotel">
+                    <symbol src="file:symbols/accommodation/hotel2.svg"/>
+                </m>
+                <m select="when-matched">
+                    <text use="poi"/>
+                </m>
+            </m>
+            <!-- <m zoom-min="16" select="first"><m v="information" select="first"><m k="name"><symbol src="file:symbols/tourist/information.svg" /><text use="poi" /></m><m><circle radius="1.5" fill="#ff0000" /></m></m></m>-->
+            <m v="viewpoint">
+                <symbol src="file:symbols/tourist/view_point.svg"/>
+            </m>
+            <m v="museum">
+                <symbol src="file:symbols/tourist/museum.svg"/>
             </m>
         </m>
         <m k="natural" v="peak" zoom-min="12">
