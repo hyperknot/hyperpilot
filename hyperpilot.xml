@@ -854,7 +854,7 @@
         </m>
         <!-- non-physical routes -->
         <m k="route" v="ferry">
-            <line cap="butt" dasharray="15,10" stroke="#707070" width="0.3"/>
+            <line cap="butt" dasharray="15,10" stroke="#707070" width="2.0"/>
             <m zoom-min="13">
                 <text use="ferry"/>
             </m>
