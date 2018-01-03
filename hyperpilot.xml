@@ -1136,4 +1136,11 @@
             <caption dy="-12" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
     </m>
+    <!-- Power lines -->
+    <m e="way" k="power" v="line">
+        <line stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="3.0"/>
+    </m>
+    <m e="way" k="power" v="minor_line">
+        <line stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="1.0"/>
+    </m>
 </rendertheme>
