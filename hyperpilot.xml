@@ -1144,7 +1144,7 @@
         <line stroke="#ff00f6" stroke-dasharray="20,10" stroke-linecap="butt" stroke-width="1.0"/>
     </m>
     <!-- Wind turbines -->
-    <m k="generator:source" v="wind">
+    <m e="node" k="generator:source" v="wind">
         <symbol src="file:symbols/peak.svg"/>
     </m>
     <!-- Cable cars -->
