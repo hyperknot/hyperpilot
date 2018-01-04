@@ -1,6 +1,4 @@
 - airfield
 - airfield names
-- power lines, of all kind
-- cable car or alpine hut's food lift
 - wind turbines
 - millitary shooting range
