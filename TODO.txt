@@ -2,3 +2,8 @@
 - airfield names
 - wind turbines
 - millitary shooting range
+
+
+node["power"="pole"]
+node["power"="tower"]
+node["generator:source"="wind"]

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme map-background="#000000" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+    <m e="node">
+        <circle fill="#ffffff" radius="10" scale-radius="true"/>
+        <caption dy="-20" fill="#ffffff" k="name" size="14"/>
+    </m>
+    <m e="way">
+        <m k="highway">
+            <line stroke="#00ff00" stroke-width="2.0"/>
+            <caption dy="-20" fill="#00ff00" k="name" size="14" zoom-min="14"/>
+        </m>
+        <m k="contour_ext">
+            <line stroke="#ffffff" stroke-width="2.0"/>
+        </m>
+        <m k="highway" v="~|no|false">
+            <line stroke="#5a68f6" stroke-width="2.0"/>
+            <caption dy="-20" fill="#5a68f6" k="name" size="14" zoom-min="14"/>
+        </m>
+    </m>
+</rendertheme>
