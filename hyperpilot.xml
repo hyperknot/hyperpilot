@@ -273,7 +273,7 @@
             <line use="river" width="-0.3"/>
         </m>
         <m v="stream" zoom-min="13">
-            <line fade="13" use="water" width="0.5"/>
+            <line fade="13" stroke="#99BADF" use="water" width="10"/>
         </m>
         <m select="first" v="river">
             <m zoom-min="12">
@@ -1128,7 +1128,7 @@
             </m>
         </m>
         <m k="natural" v="peak" zoom-min="12">
-            <symbol src="file:symbols/peak.svg" symbol-percent="200" />
+            <symbol src="file:symbols/peak.svg" symbol-percent="200"/>
             <caption dy="24" fill="#4D2F08" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
             <caption dy="-24" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
@@ -1142,7 +1142,7 @@
     </m>
     <!-- Wind turbines -->
     <m e="node" k="generator:source" v="wind">
-        <symbol src="file:symbols/_hyperpilot/wind_turbine.svg" symbol-percent="250" />
+        <symbol src="file:symbols/_hyperpilot/wind_turbine.svg" symbol-percent="250"/>
     </m>
     <!-- Cable cars -->
     <m e="way" k="aerialway">
