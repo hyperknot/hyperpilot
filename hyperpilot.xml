@@ -828,11 +828,8 @@
                 <m v="light_rail|subway|narrow_gauge" zoom-min="14">
                     <line cap="butt" fix="true" stroke="#a0a0a0" width="0.9"/>
                 </m>
-                <m v="rail|turntable" zoom-max="14">
+                <m v="rail|turntable">
                     <line cap="butt" fix="true" stroke="#444444" width="4.0"/>
-                </m>
-                <m v="rail|turntable" zoom-min="15">
-                    <line cap="butt" fade="12" fix="true" stipple="10" stipple-stroke="#ffffff" stipple-width="0.8" stroke="#aaa6a4" width="2.0"/>
                 </m>
                 <!-- <m v="rail" zoom-max="14" zoom-min="13"><line stroke="#8888aa" width="0.6" cap="butt"
                   fix="true" /></m>-->
@@ -1131,9 +1128,9 @@
             </m>
         </m>
         <m k="natural" v="peak" zoom-min="12">
-            <symbol src="file:symbols/peak.svg"/>
-            <caption dy="12" fill="#4D2F08" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            <caption dy="-12" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <symbol src="file:symbols/peak.svg" symbol-percent="200" />
+            <caption dy="24" fill="#4D2F08" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="-24" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
     </m>
     <!-- Power lines -->
