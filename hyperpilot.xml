@@ -55,11 +55,11 @@
     <style-area fade="10" fill="#ddddcc" id="quarry"/>
     <!-- track|footway|path|cycleway -->
     <style-line cap="butt" fix="true" id="footway" stipple="2" stipple-stroke="#d35c48" stipple-width="0.6" stroke="#aaffffff" width="1.8"/>
-    <style-line id="highway:cycleway" stipple-stroke="#4040ee" use="footway" width="0.1"/>
-    <style-line id="highway:track" stipple="3" stipple-stroke="#a39b68" use="footway" width="0.1"/>
-    <style-line id="highway:path" stipple="2" stipple-stroke="#837b58" use="footway" width="0.1"/>
+    <style-line id="highway:cycleway" use="pedestrian"/>
+    <style-line id="highway:track" use="pedestrian"/>
+    <style-line id="highway:path" use="pedestrian"/>
     <!-- <style-line id="footway:z16" use="footway" width="-0.95" fixed="false" fade="-1"/>-->
-    <style-line id="footway:z17" stroke="#faf8f5" width="0.3"/>
+    <style-line id="footway:z17" use="pedestrian"/>
     <!-- de: ein Weg der für Reiter vorgeshen ist.. -->
     <style-line cap="butt" id="bridleway" stipple-stroke="#837b58" stroke="#d3cb98" use="footway" width="0.1"/>
     <style-line cap="butt" fix="true" id="steps" stipple="2" stipple-stroke="#be6253" stipple-width="1.0" stroke="#aaffffff" width="4.2"/>
@@ -830,6 +830,9 @@
                 </m>
                 <m v="rail|turntable">
                     <line cap="butt" fix="true" stroke="#444444" width="4.0"/>
+                </m>
+                <m v="rail|turntable" zoom-min="15">
+                    <line cap="butt" fix="true" stroke="#444444" width="6.0"/>
                 </m>
                 <!-- <m v="rail" zoom-max="14" zoom-min="13"><line stroke="#8888aa" width="0.6" cap="butt"
                   fix="true" /></m>-->
