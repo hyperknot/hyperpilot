@@ -1145,7 +1145,7 @@
     </m>
     <!-- Wind turbines -->
     <m e="node" k="generator:source" v="wind">
-        <symbol src="file:symbols/peak.svg"/>
+        <symbol src="file:symbols/_hyperpilot/wind_turbine.svg" symbol-percent="250" />
     </m>
     <!-- Cable cars -->
     <m e="way" k="aerialway">
