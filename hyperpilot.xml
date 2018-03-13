@@ -1130,10 +1130,10 @@
                 <symbol src="symbols/tourist/museum.svg"/>
             </m>
         </m>
-        <m k="natural" v="peak" zoom-min="12">
+        <m k="natural" v="peak" zoom-min="13">
             <symbol src="symbols/peak.svg" symbol-percent="100"/>
-            <caption dy="24" fill="#4D2F08" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
-            <caption dy="-24" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="12" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="-12" fill="#000000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
     </m>
     <!-- Power lines -->
