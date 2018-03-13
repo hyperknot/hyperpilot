@@ -1131,7 +1131,7 @@
             </m>
         </m>
         <m k="natural" v="peak" zoom-min="12">
-            <symbol src="symbols/peak.svg" symbol-percent="200"/>
+            <symbol src="symbols/peak.svg" symbol-percent="100"/>
             <caption dy="24" fill="#4D2F08" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
             <caption dy="-24" fill="#4D2F08" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
