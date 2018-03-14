@@ -5,5 +5,5 @@ Best suited for [OpenAndroMaps](https://www.openandromaps.org/en/downloads/count
 
 License: MIT
 
-
+For the old version, based on VTM's default theme, look at the [1.0 branch](https://github.com/hyperknot/hyperpilot/tree/1.0).
 
