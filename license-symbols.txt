@@ -2,8 +2,8 @@ VTM default theme
 LGPL
     airport2.svg
     alpinehut.svg
-    dot_bus.svg (modified)
-    dot_white.svg
+    dot_bus.svg (modified blue)
+    dot_train.svg (modified white)
     peak.svg (modified)
 
 

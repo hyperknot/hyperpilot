@@ -40,7 +40,7 @@
         <!-- vineyard -->
         <m k="landuse" v="orchard|vineyard">
             <area fill="#e9f4e9"/>
-            <m zoom-min="13">
+            <m zoom-min="14">
                 <area src="symbols_hyperpilot/plus.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
             </m>
         </m>
@@ -139,7 +139,7 @@
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
         <m v="suburb">
-            <caption fill="#000000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption fill="#000000" k="name" priority="4" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
         </m>
         <m v="village">
             <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
@@ -158,8 +158,8 @@
     <!-- railway -->
     <m k="railway" zoom-min="10">
         <m v="station|halt">
-            <symbol src="symbols_hyperpilot/dot_white.svg" symbol-percent="150"/>
-            <caption dy="20" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <symbol src="symbols_hyperpilot/dot_train.svg" symbol-percent="150"/>
+            <caption priority="3" dy="20" fill="#c00044" k="name" size="16" stroke="#ffffff" stroke-width="4" style="bold"/>
         </m>
         <m k="tunnel" v="~|false|no">
             <m v="rail|light_rail">
@@ -172,7 +172,9 @@
     <m k="highway">
         <m v="bus_stop">
             <symbol src="symbols_hyperpilot/dot_bus.svg"/>
-            <caption dy="20" fill="#0015b6" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <m zoom-min="15">
+                <caption dy="20" fill="#0015b6" k="name" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            </m>
         </m>
     </m>
 
@@ -283,8 +285,8 @@
                 </m>
 
                 <!-- paths -->
-                <m zoom-min="14">
-                    <line stroke="#c9a573" width="1" dasharray="6,6"/>
+                <m zoom-min="15">
+                    <line stroke="#c9a573" width="1"/>
                 </m>
             </m>
         </m>
