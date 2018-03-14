@@ -1,0 +1,20 @@
+VTM default theme
+LGPL
+    airport2.svg
+    alpinehut.svg
+    dot_bus.svg (modified)
+    dot_white.svg
+    peak.svg (modified)
+
+
+http://www.heropatterns.com/
+CC BY 4.0
+    bubble.svg
+    plus.svg
+    diagonal-stripes.svg
+
+
+https://thenounproject.com/search/?q=wind%20turbine&i=2076#
+Energy Efficiency and LED Light Collection
+Public Domain
+    wind_turbine.svg

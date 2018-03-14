@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+
+    <!-- TODO cave -->
+    <!-- TODO place of worship -->
+    <!--TODO k="historic" v="ruins|castle|memorial|monument" -->
+
+
+    <!-- land and sea -->
+    <m e="way" k="natural" v="issea|sea">
+        <area fill="#99badf" mesh="true"/>
+    </m>
+    <m e="way" k="natural" v="nosea">
+        <area fill="#ffffff" mesh="true"/>
+    </m>
+
+    <!-- areas -->
+    <m e="way" k="tunnel" v="~|no" closed="yes">
+
+        <!-- non-nature -->
+        <m zoom-min="12" k="landuse" v="residential|farmyard|retail|commercial|industrial|brownfield|railway|garages|construction|landfill">
+            <area fill="#e5dbdb"/>
+        </m>
+
+        <!-- woods -->
+        <m k="natural|landuse" v="forest|wood">
+            <area fill="#c2e4c2"/>
+        </m>
+
+        <!-- fields -->
+        <m k="landuse|natural" v="meadow|grass|grassland|scrub|heath">
+            <area fill="#e9f4e9"/>
+        </m>
+
+        <m k="leisure" v="park|common|green|golf_course">
+            <area fill="#e9f4e9"/>
+        </m>
+
+        <!-- vineyard -->
+        <m k="landuse" v="orchard|vineyard">
+            <area fill="#e9f4e9"/>
+            <m zoom-min="13">
+                <area src="symbols_hyperpilot/plus.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
+            </m>
+        </m>
+
+        <!-- rock -->
+        <m k="natural" v="rock">
+            <area fill="#ffffff"/>
+        </m>
+
+        <!-- glaciers -->
+        <m k="natural" v="glacier">
+            <area fill="#d9f4f4"/>
+        </m>
+
+        <!-- wetland -->
+        <m k="natural" v="marsh|wetland">
+            <area fill="#c1d59b"/>
+        </m>
+
+        <!-- quarry -->
+        <m k="landuse" v="quarry" zoom-min="11">
+            <area fill="#e9d9c4"/>
+            <m zoom-min="13">
+                <area src="symbols_hyperpilot/bubbles.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
+            </m>
+        </m>
+
+        <!-- millitary -->
+        <m k="landuse" v="military">
+            <m zoom-min="11" zoom-max="12">
+                <area fill="#e499b0"/>
+            </m>
+            <m zoom-min="13">
+                <area fill="#f3bbcc"/>
+                <area src="symbols_hyperpilot/diagonal-stripes.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
+            </m>
+            <m zoom-min="13">
+                <caption fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            </m>
+        </m>
+
+        <m k="power">
+            <area fill="#bf34ba"/>
+        </m>
+    </m>
+
+    <!-- lakes -->
+    <m closed="yes" e="way" k="natural" v="water">
+        <area fill="#99badf"/>
+        <caption area-size="0.4" fill="#5273b2" k="name" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    </m>
+    <m closed="yes" e="way" k="landuse" v="reservoir|basin">
+        <area fill="#99badf"/>
+    </m>
+
+    <!-- water labels -->
+    <m e="way" k="waterway" v="river" zoom-min="12">
+        <pathText fill="#5273b2" font-size="14" font-style="bold" k="name" stroke="#ffffff" stroke-width="2"/>
+    </m>
+
+    <!-- rivers -->
+    <m e="way" k="waterway" v="ditch" zoom-min="13">
+        <line stroke="#99badf" stroke-width="2.4"/>
+    </m>
+    <m e="way" k="waterway" v="drain" zoom-min="13">
+        <line stroke="#99badf" stroke-width="2.0"/>
+    </m>
+    <m e="way" k="waterway" v="canal" zoom-min="10">
+        <line stroke="#99badf" stroke-width="3.6"/>
+    </m>
+    <m e="way" k="waterway" v="stream" zoom-min="13">
+        <line stroke="#99badf" stroke-width="2.4"/>
+    </m>
+    <m e="way" k="waterway" v="river" zoom-min="8">
+        <line stroke="#99badf" stroke-width="4.4"/>
+    </m>
+    <m closed="yes" e="way" k="waterway" v="riverbank">
+        <area fill="#99badf"/>
+    </m>
+    <m closed="no" e="way" k="waterway" v="riverbank">
+        <line stroke="#99badf" stroke-width="4.0"/>
+    </m>
+    <m closed="no" e="way" k="natural" v="water">
+        <line stroke="#99badf" stroke-width="4.0"/>
+    </m>
+    <m closed="no" e="way" k="landuse" v="reservoir|basin">
+        <line stroke="#99badf" stroke-width="0.8"/>
+    </m>
+
+    <!-- cities -->
+    <m k="place">
+        <m v="island" zoom-min="11">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="locality">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="suburb">
+            <caption fill="#000000" k="name" priority="4" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="village">
+            <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="town">
+            <caption fill="#000000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="city">
+            <caption fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m v="country">
+            <caption fill="#000000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+    </m>
+
+    <!-- railway -->
+    <m k="railway" zoom-min="10">
+        <m v="station|halt">
+            <symbol src="symbols_hyperpilot/dot_white.svg" symbol-percent="150"/>
+            <caption dy="20" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+        <m k="tunnel" v="~|false|no">
+            <m v="rail|light_rail">
+                <line fix="true" stipple="30" stipple-stroke="#cccccc" stroke="#000000" width="4.0"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- bus stops -->
+    <m k="highway">
+        <m v="bus_stop">
+            <symbol src="symbols_hyperpilot/dot_bus.svg"/>
+            <caption dy="20" fill="#0015b6" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        </m>
+    </m>
+
+    <!-- ferries -->
+    <m k="route" v="ferry" zoom-min="11">
+        <line dasharray="15,10" fix="true" stroke="#707070" width="4.0"/>
+    </m>
+
+    <!-- airports -->
+    <m k="aeroway" zoom-min="10">
+        <area fill="#d39be3"/>
+        <line stroke="#d39be3" width="20"/>
+        <m v="aerodrome|airport">
+            <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+            <symbol src="symbols_hyperpilot/airport2.svg"/>
+        </m>
+    </m>
+
+    <!-- peaks -->
+    <m k="natural" v="peak" zoom-min="13">
+        <symbol src="symbols_hyperpilot/peak.svg"/>
+        <caption dy="12" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        <caption dy="-12" fill="#000000" k="ele" size="12" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    </m>
+
+    <!-- place of worship / churches -->
+    <m k="amenity" v="place_of_worship">
+        <area fill="#ff0000"/>
+        <!-- TODO symbol -->
+    </m>
+
+    <!-- power lines -->
+    <m e="way" k="power" v="line">
+        <line dasharray="20,10" fix="true" stroke="#bf34ba" width="4.0"/>
+    </m>
+    <m e="way" k="power" v="minor_line">
+        <line dasharray="5,5" fix="true" stroke="#bf34ba" width="3.0"/>
+    </m>
+
+    <!-- wind turbines -->
+    <m e="node" k="generator:source" v="wind">
+        <symbol src="symbols_hyperpilot/wind_turbine.svg" symbol-percent="150"/>
+    </m>
+
+    <!-- cable cars -->
+    <m e="way" k="aerialway">
+        <line dasharray="20,10" fix="true" stroke="#3e4bc5" width="3.0"/>
+    </m>
+
+    <!-- alpine huts -->
+    <m k="tourism" v="alpine_hut">
+        <symbol src="symbols_hyperpilot/alpinehut.svg"/>
+    </m>
+
+    <!-- country border -->
+    <m e="way" k="admin_level" v="2">
+        <line stroke="#000000" stroke-width="6" fix="true"/>
+        <line stroke="#ffffff" stroke-width="3" fix="true"/>
+    </m>
+
+
+    <!-- roads and paths -->
+    <m e="way" k="tunnel" v="~|no">
+        <m k="area" v="~|no">
+            <outline-layer id="4" stroke="#000000" width="4" cap="butt"/>
+            <outline-layer id="3" stroke="#000000" width="3" cap="butt"/>
+            <outline-layer id="2" stroke="#000000" width="2" cap="butt"/>
+            <outline-layer id="1" stroke="#000000" width="1" cap="butt"/>
+            <outline-layer id="1l" stroke="#555555" width="1" cap="butt"/>
+
+            <m k="highway" select="first">
+                <!-- highway -->
+                <m v="motorway|trunk">
+                    <line stroke="#e97446" width="5" outline="2" cap="butt"/>
+                </m>
+                <m v="motorway_link|trunk_link" zoom-min="13">
+                    <line stroke="#e97446" width="3" outline="2" cap="butt"/>
+                </m>
+
+                <!-- primary -->
+                <m v="primary">
+                    <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
+                </m>
+                <m v="primary_link" zoom-min="13">
+                    <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
+                </m>
+
+                <!-- secondary -->
+                <m v="secondary" zoom-min="10">
+                    <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
+                </m>
+                <m v="secondary_link" zoom-min="13">
+                    <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
+                </m>
+
+                <!-- tertiary -->
+                <m v="tertiary|tertiary_link" zoom-min="11">
+                    <line stroke="#f5f18a" width="3" outline="1l" cap="butt"/>
+                </m>
+                <m v="unclassified" zoom-min="13">
+                    <line stroke="#ffffff" width="3" outline="1l" cap="butt"/>
+                </m>
+
+                <!-- smallest for vehicles -->
+                <m v="living_street|residential|service|services" zoom-min="13">
+                    <line stroke="#ffffff" width="2" outline="1l" cap="butt"/>
+                </m>
+
+                <!-- paths -->
+                <m zoom-min="14">
+                    <line stroke="#c9a573" width="1" dasharray="6,6"/>
+                </m>
+            </m>
+        </m>
+    </m>
+</rendertheme>
