@@ -206,7 +206,7 @@
 
     <!-- railway -->
     <m k="railway" zoom-min="10">
-        <m v="station|halt">
+        <m v="station|halt" zoom-min="13">
             <symbol src="symbols_hyperpilot/dot_train.svg" symbol-percent="150"/>
             <caption priority="3" dy="20" fill="#c00044" k="name" size="16" stroke="#ffffff" stroke-width="4" style="bold"/>
         </m>
