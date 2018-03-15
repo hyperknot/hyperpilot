@@ -282,13 +282,13 @@
     <!--</m>-->
 
 
-    <!-- caption -->
-    <!-- rivers -->
+    <!-- labels -->
+    <!-- river labels -->
     <m e="way" k="waterway" v="river" zoom-min="12">
         <pathText fill="#5273b2" font-size="14" font-style="bold" k="name" stroke="#ffffff" stroke-width="2"/>
     </m>
 
-    <!-- cities -->
+    <!-- city labels -->
     <m k="place">
         <m v="island" zoom-min="11">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
@@ -312,6 +312,5 @@
             <caption fill="#000000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
     </m>
-
 
 </rendertheme>
