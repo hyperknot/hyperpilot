@@ -5,6 +5,7 @@
     <!-- TODO cave -->
     <!-- TODO place of worship -->
     <!--TODO k="historic" v="ruins|castle|memorial|monument" -->
+    <!--k="historic" v="ruins|castle|memorial|monument|archaeological_site"-->
 
 
     <!-- land and sea -->
@@ -66,6 +67,11 @@
             <m zoom-min="13">
                 <area src="symbols_hyperpilot/bubbles.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
             </m>
+        </m>
+
+        <!-- buildings -->
+        <m k="building">
+            <area fill="#999999"/>
         </m>
 
         <!-- millitary -->
@@ -202,9 +208,9 @@
     </m>
 
     <!-- place of worship / churches -->
+    <!-- TODO symbol -->
     <m k="amenity" v="place_of_worship">
         <area fill="#ff0000"/>
-        <!-- TODO symbol -->
     </m>
 
     <!-- power lines -->
@@ -221,6 +227,7 @@
     </m>
 
     <!-- cable cars -->
+    <!-- TODO softer blue -->
     <m e="way" k="aerialway">
         <line dasharray="20,10" fix="true" stroke="#3e4bc5" width="3"/>
     </m>
