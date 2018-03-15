@@ -18,9 +18,9 @@
     <!-- areas -->
     <m e="way" k="tunnel" v="~|no" closed="yes">
 
-        <!-- non-nature -->
+        <!-- built-up areas -->
         <m zoom-min="12" k="landuse" v="residential|farmyard|retail|commercial|industrial|brownfield|railway|garages|construction|landfill">
-            <area fill="#e5dbdb"/>
+            <area fill="#c1baba"/>
         </m>
 
         <!-- woods -->
@@ -69,9 +69,9 @@
         </m>
 
         <!-- buildings -->
-        <m k="building" zoom-min="15">
-            <area fill="#999999"/>
-        </m>
+        <!--<m k="building" zoom-min="15">-->
+        <!--<area fill="#999999"/>-->
+        <!--</m>-->
 
         <!-- millitary -->
         <m k="landuse" v="military">
@@ -264,20 +264,21 @@
         <symbol src="symbols_hyperpilot/alpinehut.svg"/>
     </m>
 
-    <m k="building">
-        <m k="amenity" v="place_of_worship">
-            <area fill="#ff0000"/>
-            <m k="religion" v="christian">
-                <symbol src="symbols_hyperpilot/religious-christian-15.svg" symbol-scaling="size" symbol-height="8" symbol-width="8" priority="109" display="always"/>
-                <area fill="#0000ff"/>
-                <!--<m k="building" v="~chapel">-->
-                <!--</m>-->
-            </m>
-            <!--<m>-->
-            <!--<symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>-->
-            <!--</m>-->
-        </m>
-    </m>
+    <!-- places of worship -->
+    <!--<m k="building">-->
+    <!--<m k="amenity" v="place_of_worship">-->
+    <!--<area fill="#ff0000"/>-->
+    <!--<m k="religion" v="christian">-->
+    <!--<symbol src="symbols_hyperpilot/religious-christian-15.svg" symbol-scaling="size" symbol-height="8" symbol-width="8" priority="109" display="always"/>-->
+    <!--<area fill="#0000ff"/>-->
+    <!--&lt;!&ndash;<m k="building" v="~chapel">&ndash;&gt;-->
+    <!--&lt;!&ndash;</m>&ndash;&gt;-->
+    <!--</m>-->
+    <!--&lt;!&ndash;<m>&ndash;&gt;-->
+    <!--&lt;!&ndash;<symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>&ndash;&gt;-->
+    <!--&lt;!&ndash;</m>&ndash;&gt;-->
+    <!--</m>-->
+    <!--</m>-->
 
 
     <!-- caption -->
