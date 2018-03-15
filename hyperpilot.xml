@@ -92,6 +92,17 @@
         </m>
     </m>
 
+    <!-- airports -->
+    <m k="aeroway" zoom-min="10">
+        <area fill="#d39be3"/>
+        <line stroke="#d39be3" width="20"/>
+        <m v="aerodrome|airport">
+            <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+            <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+            <symbol src="symbols_hyperpilot/airport2.svg"/>
+        </m>
+    </m>
+
     <!-- lakes -->
     <m closed="yes" e="way" k="natural" v="water">
         <area fill="#99badf"/>
@@ -221,16 +232,6 @@
         <line dasharray="15,10" fix="true" stroke="#707070" width="4"/>
     </m>
 
-    <!-- airports -->
-    <m k="aeroway" zoom-min="10">
-        <area fill="#d39be3"/>
-        <line stroke="#d39be3" width="20"/>
-        <m v="aerodrome|airport">
-            <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
-            <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
-            <symbol src="symbols_hyperpilot/airport2.svg"/>
-        </m>
-    </m>
 
     <!-- peaks -->
     <m k="natural" v="peak" zoom-min="13">
