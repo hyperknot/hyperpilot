@@ -3,7 +3,6 @@
              xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
     <!-- TODO cave -->
-    <!-- TODO place of worship -->
     <!--TODO k="historic" v="ruins|castle|memorial|monument" -->
     <!--k="historic" v="ruins|castle|memorial|monument|archaeological_site"-->
 
@@ -70,7 +69,7 @@
         </m>
 
         <!-- buildings -->
-        <m k="building">
+        <m k="building" zoom-min="15">
             <area fill="#999999"/>
         </m>
 
@@ -83,7 +82,7 @@
                 <area fill="#f3bbcc"/>
                 <area src="symbols_hyperpilot/diagonal-stripes.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
             </m>
-            <m zoom-min="13">
+            <m zoom-min="14">
                 <caption fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
             </m>
         </m>
@@ -102,10 +101,6 @@
         <area fill="#99badf"/>
     </m>
 
-    <!-- water labels -->
-    <m e="way" k="waterway" v="river" zoom-min="12">
-        <pathText fill="#5273b2" font-size="14" font-style="bold" k="name" stroke="#ffffff" stroke-width="2"/>
-    </m>
 
     <!-- rivers -->
     <m e="way" k="waterway" v="ditch" zoom-min="13">
@@ -134,113 +129,6 @@
     </m>
     <m closed="no" e="way" k="landuse" v="reservoir|basin">
         <line stroke="#99badf" stroke-width="0.8"/>
-    </m>
-
-    <!-- cities -->
-    <m k="place">
-        <m v="island" zoom-min="11">
-            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="locality">
-            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="suburb">
-            <caption fill="#000000" k="name" priority="4" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="village">
-            <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="town">
-            <caption fill="#000000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="city">
-            <caption fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-        <m v="country">
-            <caption fill="#000000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2" style="bold"/>
-        </m>
-    </m>
-
-    <!-- railway -->
-    <m k="railway" zoom-min="10">
-        <m v="station|halt">
-            <symbol src="symbols_hyperpilot/dot_train.svg" symbol-percent="150"/>
-            <caption priority="3" dy="20" fill="#c00044" k="name" size="16" stroke="#ffffff" stroke-width="4" style="bold"/>
-        </m>
-        <m k="tunnel" v="~|false|no">
-            <m v="rail|light_rail">
-                <line fix="true" stipple="30" stipple-stroke="#cccccc" stroke="#000000" width="4"/>
-            </m>
-        </m>
-    </m>
-
-    <!-- bus stops -->
-    <m k="highway">
-        <m v="bus_stop">
-            <symbol src="symbols_hyperpilot/dot_bus.svg"/>
-            <m zoom-min="15">
-                <caption dy="20" fill="#0015b6" k="name" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
-            </m>
-        </m>
-    </m>
-
-    <!-- ferries -->
-    <m k="route" v="ferry" zoom-min="11">
-        <line dasharray="15,10" fix="true" stroke="#707070" width="4"/>
-    </m>
-
-    <!-- airports -->
-    <m k="aeroway" zoom-min="10">
-        <area fill="#d39be3"/>
-        <line stroke="#d39be3" width="20"/>
-        <m v="aerodrome|airport">
-            <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
-            <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
-            <symbol src="symbols_hyperpilot/airport2.svg"/>
-        </m>
-    </m>
-
-    <!-- peaks -->
-    <m k="natural" v="peak" zoom-min="13">
-        <symbol src="symbols_hyperpilot/peak.svg"/>
-        <caption dy="12" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
-        <caption dy="-12" fill="#000000" k="ele" size="12" stroke="#ffffff" stroke-width="2" style="bold"/>
-    </m>
-
-    <!-- place of worship / churches -->
-    <!-- TODO symbol -->
-    <m k="amenity" v="place_of_worship">
-        <area fill="#ff0000"/>
-    </m>
-
-    <!-- power lines -->
-    <m e="way" k="power" v="line">
-        <line dasharray="20,10" fix="true" stroke="#bf34ba" width="4"/>
-    </m>
-    <m e="way" k="power" v="minor_line">
-        <line dasharray="5,5" fix="true" stroke="#bf34ba" width="3"/>
-    </m>
-
-    <!-- wind turbines -->
-    <m e="node" k="generator:source" v="wind">
-        <symbol src="symbols_hyperpilot/wind_turbine.svg" symbol-percent="150"/>
-    </m>
-
-    <!-- cable cars -->
-    <!-- TODO softer blue -->
-    <m e="way" k="aerialway">
-        <line dasharray="20,10" fix="true" stroke="#3e4bc5" width="3"/>
-    </m>
-
-    <!-- alpine huts -->
-    <m k="tourism" v="alpine_hut">
-        <symbol src="symbols_hyperpilot/alpinehut.svg"/>
-    </m>
-
-    <!-- country border -->
-    <m e="way" k="admin_level" v="2">
-        <line stroke="#000000" stroke-width="6" fix="true"/>
-        <line stroke="#ffffff" stroke-width="3" fix="true"/>
     </m>
 
 
@@ -298,4 +186,130 @@
             </m>
         </m>
     </m>
+
+    <!-- country border -->
+    <m e="way" k="admin_level" v="2">
+        <line stroke="#000000" stroke-width="6" fix="true"/>
+        <line stroke="#ffffff" stroke-width="3" fix="true"/>
+    </m>
+
+    <!-- railway -->
+    <m k="railway" zoom-min="10">
+        <m v="station|halt">
+            <symbol src="symbols_hyperpilot/dot_train.svg" symbol-percent="150"/>
+            <caption priority="3" dy="20" fill="#c00044" k="name" size="16" stroke="#ffffff" stroke-width="4" style="bold"/>
+        </m>
+        <m k="tunnel" v="~|false|no">
+            <m v="rail|light_rail">
+                <line fix="true" stipple="30" stipple-stroke="#cccccc" stroke="#000000" width="4"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- bus stops -->
+    <m k="highway">
+        <m v="bus_stop">
+            <symbol src="symbols_hyperpilot/dot_bus.svg"/>
+            <m zoom-min="15">
+                <caption dy="20" fill="#0015b6" k="name" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- ferries -->
+    <m k="route" v="ferry" zoom-min="11">
+        <line dasharray="15,10" fix="true" stroke="#707070" width="4"/>
+    </m>
+
+    <!-- airports -->
+    <m k="aeroway" zoom-min="10">
+        <area fill="#d39be3"/>
+        <line stroke="#d39be3" width="20"/>
+        <m v="aerodrome|airport">
+            <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+            <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+            <symbol src="symbols_hyperpilot/airport2.svg"/>
+        </m>
+    </m>
+
+    <!-- peaks -->
+    <m k="natural" v="peak" zoom-min="13">
+        <symbol src="symbols_hyperpilot/peak.svg"/>
+        <caption dy="12" fill="#000000" k="name" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        <caption dy="-12" fill="#000000" k="ele" size="12" stroke="#ffffff" stroke-width="2" style="bold"/>
+    </m>
+
+
+    <!-- power lines -->
+    <m e="way" k="power" v="line">
+        <line dasharray="20,10" fix="true" stroke="#bf34ba" width="4"/>
+    </m>
+    <m e="way" k="power" v="minor_line">
+        <line dasharray="5,5" fix="true" stroke="#bf34ba" width="3"/>
+    </m>
+
+    <!-- wind turbines -->
+    <m e="node" k="generator:source" v="wind">
+        <symbol src="symbols_hyperpilot/wind_turbine.svg" symbol-percent="150"/>
+    </m>
+
+    <!-- cable cars -->
+    <!-- TODO softer blue -->
+    <m e="way" k="aerialway">
+        <line dasharray="20,10" fix="true" stroke="#3e4bc5" width="3"/>
+    </m>
+
+    <!-- alpine huts -->
+    <m k="tourism" v="alpine_hut">
+        <symbol src="symbols_hyperpilot/alpinehut.svg"/>
+    </m>
+
+    <m k="building">
+        <m k="amenity" v="place_of_worship">
+            <area fill="#ff0000"/>
+            <m k="religion" v="christian">
+                <symbol src="symbols_hyperpilot/religious-christian-15.svg" symbol-scaling="size" symbol-height="8" symbol-width="8" priority="109" display="always"/>
+                <area fill="#0000ff"/>
+                <!--<m k="building" v="~chapel">-->
+                <!--</m>-->
+            </m>
+            <!--<m>-->
+            <!--<symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>-->
+            <!--</m>-->
+        </m>
+    </m>
+
+
+    <!-- caption -->
+    <!-- rivers -->
+    <m e="way" k="waterway" v="river" zoom-min="12">
+        <pathText fill="#5273b2" font-size="14" font-style="bold" k="name" stroke="#ffffff" stroke-width="2"/>
+    </m>
+
+    <!-- cities -->
+    <m k="place">
+        <m v="island" zoom-min="11">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="locality">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="suburb">
+            <caption fill="#000000" k="name" priority="4" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="village">
+            <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="town">
+            <caption fill="#000000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="city">
+            <caption fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="country">
+            <caption fill="#000000" k="name" priority="0" size="20" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+    </m>
+
+
 </rendertheme>
