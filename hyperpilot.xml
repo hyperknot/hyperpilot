@@ -266,20 +266,21 @@
     </m>
 
     <!-- places of worship and churches -->
-    <m e="way" k="building" zoom-min="13" select="first">
-        <m k="amenity" v="place_of_worship" select="first">
-            <m k="religion" v="christian">
-                <symbol src="symbols_hyperpilot/religious-christian-15.svg"/>
-            </m>
-            <m>
-                <symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>
+    <m e="way" zoom-min="13" select="first">
+        <m k="building" select="first">
+            <m k="amenity" v="place_of_worship" select="first">
+                <m k="religion" v="christian">
+                    <symbol src="symbols_hyperpilot/religious-christian-15.svg"/>
+                </m>
+                <m>
+                    <symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>
+                </m>
             </m>
         </m>
-    </m>
 
-    <m e="way" k="historic" v="ruins|castle" zoom-min="13">
-        <area fill="#ff0000"/>
-        <symbol src="assets:symbols/accommodation/alpinehut.svg"/>
+        <m k="historic" v="ruins|castle">
+            <symbol src="symbols_hyperpilot/castle-15.svg"/>
+        </m>
     </m>
 
 
