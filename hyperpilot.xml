@@ -96,7 +96,7 @@
     <m k="aeroway" zoom-min="10">
         <area fill="#d39be3"/>
         <line stroke="#d39be3" width="20"/>
-        <m v="aerodrome|airport">
+        <m v="aerodrome">
             <caption dy="18" fill="#000000" k="name" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
             <caption dy="-18" fill="#000000" k="ref" priority="3" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
             <symbol src="symbols_hyperpilot/airport2.svg"/>
@@ -218,11 +218,11 @@
     </m>
 
     <!-- bus stops -->
-    <m k="highway">
+    <m k="highway" zoom-min="13">
         <m v="bus_stop">
             <symbol src="symbols_hyperpilot/dot_bus.svg"/>
             <m zoom-min="15">
-                <caption dy="20" fill="#0015b6" k="name" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
+                <caption dy="20" fill="#3d4bb5" k="name" size="16" stroke="#ffffff" stroke-width="2" style="bold"/>
             </m>
         </m>
     </m>
@@ -265,21 +265,26 @@
         <symbol src="symbols_hyperpilot/alpinehut.svg"/>
     </m>
 
-    <!-- places of worship -->
-    <!--<m k="building">-->
-    <!--<m k="amenity" v="place_of_worship">-->
-    <!--<area fill="#ff0000"/>-->
-    <!--<m k="religion" v="christian">-->
-    <!--<symbol src="symbols_hyperpilot/religious-christian-15.svg" symbol-scaling="size" symbol-height="8" symbol-width="8" priority="109" display="always"/>-->
-    <!--<area fill="#0000ff"/>-->
-    <!--&lt;!&ndash;<m k="building" v="~chapel">&ndash;&gt;-->
-    <!--&lt;!&ndash;</m>&ndash;&gt;-->
-    <!--</m>-->
-    <!--&lt;!&ndash;<m>&ndash;&gt;-->
-    <!--&lt;!&ndash;<symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>&ndash;&gt;-->
-    <!--&lt;!&ndash;</m>&ndash;&gt;-->
-    <!--</m>-->
-    <!--</m>-->
+    <m k="building">
+        <area fill="#ff0000"/>
+    </m>
+
+    <!-- places of worship and churches -->
+    <m k="building" zoom-min="13" select="first">
+        <symbol src="symbols_hyperpilot/castle-15.svg"/>
+
+        <m k="amenity" v="place_of_worship" select="first">
+            <m k="religion" v="christian">
+                <symbol src="symbols_hyperpilot/religious-christian-15.svg"/>
+            </m>
+            <m>
+                <symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>
+            </m>
+        </m>
+        <m k="historic" v="ruins">
+            <symbol src="symbols_hyperpilot/castle-15.svg"/>
+        </m>
+    </m>
 
 
     <!-- labels -->
