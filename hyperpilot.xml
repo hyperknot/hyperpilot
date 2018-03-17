@@ -2,11 +2,6 @@
 <rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
-    <!-- TODO cave -->
-    <!--TODO k="historic" v="ruins|castle|memorial|monument" -->
-    <!--k="historic" v="ruins|castle|memorial|monument|archaeological_site"-->
-
-
     <!-- land and sea -->
     <m e="way" k="natural" v="issea|sea">
         <area fill="#99badf" mesh="true"/>
@@ -67,11 +62,6 @@
                 <area src="symbols_hyperpilot/bubbles.svg" symbol-scaling="size" symbol-height="20" symbol-width="20"/>
             </m>
         </m>
-
-        <!-- buildings -->
-        <!--<m k="building" zoom-min="15">-->
-        <!--<area fill="#999999"/>-->
-        <!--</m>-->
 
         <!-- millitary -->
         <m k="landuse" v="military">
@@ -283,6 +273,10 @@
         </m>
     </m>
 
+    <!-- caves -->
+    <m k="natural" v="cave_entrance" zoom-min="15">
+        <symbol src="symbols_hyperpilot/cave.svg"/>
+    </m>
 
     <!-- labels -->
     <!-- river labels -->
