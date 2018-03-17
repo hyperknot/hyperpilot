@@ -77,9 +77,10 @@
             </m>
         </m>
 
-        <m k="power">
-            <area fill="#bf34ba"/>
-        </m>
+        <!-- power plants -->
+        <!--<m k="power">-->
+            <!--<area fill="#bf34ba"/>-->
+        <!--</m>-->
     </m>
 
     <!-- airports -->
