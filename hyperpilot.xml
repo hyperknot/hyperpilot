@@ -261,18 +261,12 @@
     </m>
 
     <!-- alpine huts -->
-    <m k="tourism" v="alpine_hut">
-        <symbol src="symbols_hyperpilot/alpinehut.svg"/>
-    </m>
-
-    <m k="building">
-        <area fill="#ff0000"/>
+    <m k="tourism" v="alpine_hut" zoom-min="13">
+        <symbol src="symbols_hyperpilot/home-15.svg"/>
     </m>
 
     <!-- places of worship and churches -->
-    <m k="building" zoom-min="13" select="first">
-        <symbol src="symbols_hyperpilot/castle-15.svg"/>
-
+    <m e="way" k="building" zoom-min="13" select="first">
         <m k="amenity" v="place_of_worship" select="first">
             <m k="religion" v="christian">
                 <symbol src="symbols_hyperpilot/religious-christian-15.svg"/>
@@ -281,9 +275,11 @@
                 <symbol src="symbols_hyperpilot/place-of-worship-15.svg"/>
             </m>
         </m>
-        <m k="historic" v="ruins">
-            <symbol src="symbols_hyperpilot/castle-15.svg"/>
-        </m>
+    </m>
+
+    <m e="way" k="historic" v="ruins|castle" zoom-min="13">
+        <area fill="#ff0000"/>
+        <symbol src="assets:symbols/accommodation/alpinehut.svg"/>
     </m>
 
 
