@@ -1,12 +1,13 @@
 VTM default theme
 LGPL
     airport2.svg
-    alpinehut.svg
+    cave.svg
     dot_bus.svg (modified blue)
     dot_train.svg (modified white)
-    peak.svg (modified)
+    peak.svg (modified)]
 
 
+Hero Patterns
 http://www.heropatterns.com/
 CC BY 4.0
     bubble.svg
@@ -14,7 +15,18 @@ CC BY 4.0
     diagonal-stripes.svg
 
 
-https://thenounproject.com/search/?q=wind%20turbine&i=2076#
+Maki Icons
+https://www.mapbox.com/maki-icons/
+CC0 1.0
+    castle-15.svg
+    home-15.svg
+    place-of-worship-15.svg
+    religious-christian-15.svg
+
+
 Energy Efficiency and LED Light Collection
+https://thenounproject.com/search/?q=wind%20turbine&i=2076#
 Public Domain
     wind_turbine.svg
+
+
