@@ -290,7 +290,16 @@
         <m v="island" zoom-min="11">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
-        <m v="locality">
+        <m v="locality" zoom-min="13">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="isolated_dwelling" zoom-min="13">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="hamlet" zoom-min="13">
+            <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
+        </m>
+        <m v="neighbourhood" zoom-min="13">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
         <m v="suburb">
@@ -300,7 +309,7 @@
             <caption fill="#000000" k="name" priority="3" size="17" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
         <m v="town">
-            <caption fill="#000000" k="name" priority="2" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
+            <caption fill="#000000" k="name" priority="2" size="18" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
         <m v="city">
             <caption fill="#000000" k="name" priority="1" size="19" stroke="#ffffff" stroke-width="2" style="bold"/>
