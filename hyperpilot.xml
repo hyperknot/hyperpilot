@@ -287,19 +287,19 @@
 
     <!-- city labels -->
     <m k="place">
-        <m v="island" zoom-min="11">
+        <m v="island" zoom-min="13">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
-        <m v="locality" zoom-min="13">
+        <m v="locality" zoom-min="14">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
-        <m v="isolated_dwelling" zoom-min="13">
+        <m v="isolated_dwelling" zoom-min="14">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
-        <m v="hamlet" zoom-min="13">
+        <m v="hamlet" zoom-min="14">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
-        <m v="neighbourhood" zoom-min="13">
+        <m v="neighbourhood" zoom-min="14">
             <caption fill="#000000" k="name" priority="5" size="14" stroke="#ffffff" stroke-width="2" style="bold"/>
         </m>
         <m v="suburb">
