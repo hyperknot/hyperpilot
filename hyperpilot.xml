@@ -151,40 +151,34 @@
                 <!-- highway -->
                 <m v="motorway|trunk">
                     <line stroke="#e97446" width="5" outline="2" cap="butt"/>
-                    <m k="network|hknetwork" v="~" zoom-min="10">
+                    <m k="network|hknetwork" v="~" zoom-min="12">
                         <text use="major-road"/>
                     </m>
                 </m>
-                <m v="motorway_link|trunk_link" zoom-min="13">
+                <m v="motorway_link|trunk_link">
                     <line stroke="#e97446" width="3" outline="2" cap="butt"/>
                 </m>
 
                 <!-- primary -->
-                <m v="primary">
+                <m v="primary|primary_link">
                     <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
-                    <m k="network|hknetwork" v="~" zoom-min="11">
+                    <m k="network|hknetwork" v="~" zoom-min="12">
                         <text use="major-road"/>
                     </m>
                 </m>
-                <m v="primary_link" zoom-min="13">
-                    <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
-                </m>
 
                 <!-- secondary -->
-                <m v="secondary" zoom-min="10">
+                <m v="secondary|secondary_link" zoom-min="10">
                     <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
-                    <m k="network|hknetwork" v="~" zoom-min="12">
+                    <m k="network|hknetwork" v="~" zoom-min="13">
                         <text use="road"/>
                     </m>
-                </m>
-                <m v="secondary_link" zoom-min="13">
-                    <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
                 </m>
 
                 <!-- tertiary -->
                 <m v="tertiary|tertiary_link" zoom-min="11">
                     <line stroke="#f5f18a" width="3" outline="1l" cap="butt"/>
-                    <m k="network|hknetwork" v="~" zoom-min="12">
+                    <m k="network|hknetwork" v="~" zoom-min="13">
                         <text use="road"/>
                     </m>
                 </m>
@@ -207,8 +201,9 @@
 
     <!-- country border -->
     <m e="way" k="admin_level" v="2">
-        <line stroke="#000000" stroke-width="6" fix="true"/>
-        <line stroke="#ffffff" stroke-width="3" fix="true"/>
+        <!--<line stroke="#000000" stroke-width="8" fix="true"/>-->
+        <!--<line stroke="#ffcc00" stroke-width="6" fix="true"/>-->
+        <line fix="true" stipple="50" stipple-stroke="#ffd93f" stroke="#921f1f" width="6"/>
     </m>
 
     <!-- railway -->
