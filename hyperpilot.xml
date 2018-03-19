@@ -2,6 +2,7 @@
 <rendertheme map-background="#ffffff" version="1" xmlns="http://opensciencemap.org/rendertheme" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://opensciencemap.org/rendertheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
+
     <!-- land and sea -->
     <m e="way" k="natural" v="issea|sea">
         <area fill="#99badf" mesh="true"/>
@@ -79,7 +80,7 @@
 
         <!-- power plants -->
         <!--<m k="power">-->
-            <!--<area fill="#bf34ba"/>-->
+        <!--<area fill="#bf34ba"/>-->
         <!--</m>-->
     </m>
 
@@ -135,8 +136,11 @@
 
 
     <!-- roads and paths -->
+    <style-text id="road" k="ref" priority="2" size="16" fill="#000000" stroke="#ffffff" stroke-width="4"/>
+    <style-text id="major-road" k="ref" priority="1" size="16" fill="#000000" stroke="#ffffff" stroke-width="4" style="bold"/>
+
     <m e="way" k="tunnel" v="~|no">
-        <m k="area" v="~|no">
+        <m k="area" v="~">
             <outline-layer id="4" stroke="#000000" width="4" cap="butt"/>
             <outline-layer id="3" stroke="#000000" width="3" cap="butt"/>
             <outline-layer id="2" stroke="#000000" width="2" cap="butt"/>
@@ -147,6 +151,9 @@
                 <!-- highway -->
                 <m v="motorway|trunk">
                     <line stroke="#e97446" width="5" outline="2" cap="butt"/>
+                    <m k="network|hknetwork" v="~" zoom-min="10">
+                        <text use="major-road"/>
+                    </m>
                 </m>
                 <m v="motorway_link|trunk_link" zoom-min="13">
                     <line stroke="#e97446" width="3" outline="2" cap="butt"/>
@@ -155,6 +162,9 @@
                 <!-- primary -->
                 <m v="primary">
                     <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
+                    <m k="network|hknetwork" v="~" zoom-min="11">
+                        <text use="major-road"/>
+                    </m>
                 </m>
                 <m v="primary_link" zoom-min="13">
                     <line stroke="#e8af5f" width="4" outline="2" cap="butt"/>
@@ -163,6 +173,9 @@
                 <!-- secondary -->
                 <m v="secondary" zoom-min="10">
                     <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
+                    <m k="network|hknetwork" v="~" zoom-min="12">
+                        <text use="road"/>
+                    </m>
                 </m>
                 <m v="secondary_link" zoom-min="13">
                     <line stroke="#ebdeaa" width="4" outline="1" cap="butt"/>
@@ -171,6 +184,9 @@
                 <!-- tertiary -->
                 <m v="tertiary|tertiary_link" zoom-min="11">
                     <line stroke="#f5f18a" width="3" outline="1l" cap="butt"/>
+                    <m k="network|hknetwork" v="~" zoom-min="12">
+                        <text use="road"/>
+                    </m>
                 </m>
                 <m v="unclassified" zoom-min="13">
                     <line stroke="#ffffff" width="3" outline="1l" cap="butt"/>
@@ -284,6 +300,7 @@
     <m e="way" k="waterway" v="river" zoom-min="12">
         <pathText fill="#5273b2" font-size="14" font-style="bold" k="name" stroke="#ffffff" stroke-width="2"/>
     </m>
+
 
     <!-- city labels -->
     <m k="place">
